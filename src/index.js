@@ -1,4 +1,4 @@
-//ใส่เพิ่มเพื่อให้มันอัปเดตแบบ real-tinme
+//ใส่เพิ่มเพื่อให้มันอัปเดตแบบ real-time
 require('electron-reload')(__dirname, {
   electron: require(`${__dirname}/../node_modules/electron`)
 });
