@@ -7,7 +7,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../img/wood-bg.jpg);
+  background-image: 
+    url("../../img/wood-decoration-translucent.svg"),
+    linear-gradient(45deg, #2e1915, #4c2b21, #66442c, #7c5835);
 }
 
 header {
