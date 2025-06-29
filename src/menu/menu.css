@@ -23,17 +23,81 @@ header {
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between; /* Push h2 and icons to opposite sides */
-    align-items: center; /* Vertically center the items */
-    width: 100%; /* Ensure it takes the full width */
+  display: flex;
+  justify-content: space-between; /* Push h2 and icons to opposite sides */
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Ensure it takes the full width */
 }
 
 header h2 {
-    width: 302px;
-    height: 56px;
-    color: #ffffff;
-    font-size: 48px;
-    font-weight: 400;
-    margin: 0; /* Remove default margin */
+  width: 302px;
+  height: 56px;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0; /* Remove default margin */
+}
+
+.menu-container {
+  display: flex;
+  width: 510px;
+  height: 510px;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 22px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  flex-shrink: 0;
+  background: url('../../img/sky-bg.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .menu-container h2{
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 26px;
+  margin-bottom: 0;
+  width: 500px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+main .menu-container p {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.wrapper {
+    width: 550px;
+    height: 620px;
+    border: 7px;
+}
+
+/*contract-close icons*/
+.contract-close-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contract-icon{
+    image-rendering: pixelated;
+}
+
+.contract-icon:hover{
+    transform: scale(1.1);
+}
+
+.close-icon:hover{
+    transform: scale(1.1);
+}
+
+.close-icon{
+    image-rendering: pixelated;
 }
