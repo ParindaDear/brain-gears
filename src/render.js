@@ -13,3 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const adminBrustBtn = document.getElementById('admin-brust');
     const learningBtn = document.getElementById('learning-review');
 })
+
+    if (deepWorkBtn) {
+        console.log("Deep work button found!");
+        deepWorkBtn.addEventListener('click', () => {
+            console.log("Deep work button clicked! Sending navigation request... ");
+            window.electron.send('navigate', 'รอเอามาใส่ไปสร้างหน้านี้ก่อน')
+        })
+    }
