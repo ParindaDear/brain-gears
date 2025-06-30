@@ -1,0 +1,43 @@
+html, body {
+  font-family: "Pixelify Sans";
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: 
+    url("../../img/wood-decoration-translucent.svg"),
+    linear-gradient(45deg, #2e1915, #4c2b21, #66442c, #7c5835);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  margin-top: 19px;
+  margin-left: 12px;
+  margin-right: 28px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 510px;
+  padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+header h2 {
+    width: 302px;
+    height: 56px;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0; 
+}

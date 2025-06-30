@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Gears</title>
+    <link rel="stylesheet" href="./mode.css">
+
+    <script defer src="../render.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <h2>Brain Gears</h2>
+                <div class="contract-close-icon">
+                    <img src="../../img/contract.png" class="contract-icon" alt="contract icon">
+                    <img src="../../img/close.png" class="close-icon" alt="close icon">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="timer-container">
+                <h1>Creative sparks ending in...</h1>
+                <div class="animation-container">
+                    <img src="../../img/creative-flow-icon.png" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+                <div class="countdown-display">
+                    <p><span id="timer">25:00</span></p>
+                    <script>
+                        const modeDurationSeconds = 25 * 60; // 25 minutes
+                    </script>
+                    <script src="timer.js"></script>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
