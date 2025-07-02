@@ -58,5 +58,33 @@ header h2 {
     background: url('../../img/sky-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    
+}
+
+.wrapper {
+  width: 550px;
+  height: 620px;
+  border: 7px;
+}
+
+/*contract-close icons*/
+.contract-close-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contract-icon{
+  image-rendering: pixelated;
+}
+
+.contract-icon:hover{
+  transform: scale(1.1);
+}
+
+.close-icon:hover{
+  transform: scale(1.1);
+}
+
+.close-icon{
+  image-rendering: pixelated;
 }
