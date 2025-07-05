@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     }
 
-    //Get references to all menu buttons
+    // Menu buttons
     const deepWorkBtn = document.getElementById('deep-work');
     const creativeFlowBtn = document.getElementById('creative-flow');
     const adminBrustBtn = document.getElementById('admin-brust');
@@ -25,6 +25,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (adminBrustBtn) {
+        adminBrustBtn.addEventListener('click', () => {
+            window.electron.send('navigate', 'mode/adminbrust.html');
+        });
+    }
 
-})
+    if (learningBtn) {
+        learningBtn.addEventListener('click', () => {
+            window.electron.send('navigate', 'mode/learningreview.html');
+        });
+    }
+});
 
+//Contract and Close buttons 
+document.addEventListener('DOMContentLoaded', () => {
+    const closeBtn = document.querySelector('.close-icon');
+    const contractBtn = document.querySelector('.contract-icon');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            window.electron.send('window-control', 'quit');
+        });
+    }
+
+    if (contractBtn) {
+        contractBtn.addEventListener('click', () => {
+            window.electron.send('window-control', 'minimize');
+        });
+    }
+});
