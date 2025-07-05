@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //Start button in first page
     const startButtonn = document.getElementById('start-btn');
     if (startButtonn) {
-        document.getElementById('start-btn').addEventListener('click', () => {
+        startButtonn.addEventListener('click', () => {
             window.location.href = 'menu/menu.html';
     });
     }
@@ -12,12 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const creativeFlowBtn = document.getElementById('creative-flow');
     const adminBrustBtn = document.getElementById('admin-brust');
     const learningBtn = document.getElementById('learning-review');
-})
 
     if (deepWorkBtn) {
-        console.log("Deep work button found!");
         deepWorkBtn.addEventListener('click', () => {
-            console.log("Deep work button clicked! Sending navigation request... ");
-            window.electron.send('navigate', 'รอเอามาใส่ไปสร้างหน้านี้ก่อน')
-        })
+            window.electron.send('navigate', 'mode/deepwork.html');
+        });
     }
+
+    if (creativeFlowBtn) {
+        creativeFlowBtn.addEventListener('click', () => {
+            window.electron.send('navigate', 'mode/creativeflow.html');
+        });
+    }
+
+
+})
+
