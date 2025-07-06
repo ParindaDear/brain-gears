@@ -4,7 +4,7 @@ require('electron-reload')(__dirname, {
 });
 
 //(Already included with this code)
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.(Already included with this code)
