@@ -1,0 +1,15 @@
+directories:
+  output: dist
+  buildResources: assets
+appId: com.brain.gears
+productName: Brain Gears
+files:
+  - filter:
+      - src/**/*
+      - preload.js
+      - index.js
+extraMetadata:
+  main: src/index.js
+win:
+  icon: assets/icon.png
+electronVersion: 37.1.0

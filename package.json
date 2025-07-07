@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": {
@@ -30,6 +31,25 @@
     "@electron-forge/plugin-fuses": "^7.8.1",
     "@electron/fuses": "^1.8.0",
     "electron": "37.1.0",
+    "electron-builder": "^26.0.12",
     "electron-reload": "^2.0.0-alpha.1"
+  },
+  "build": {
+    "appId": "com.brain.gears",
+    "productName": "Brain Gears",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "preload.js",
+      "index.js"
+    ],
+    "extraMetadata": {
+      "main": "src/index.js"
+    },
+    "win": {
+      "icon": "assets/icon.png"
+    }
   }
 }

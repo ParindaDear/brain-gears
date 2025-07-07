@@ -1,7 +1,13 @@
-//ใส่เพิ่มเพื่อให้มันอัปเดตแบบ real-time
-require('electron-reload')(__dirname, {
-  electron: require(`${__dirname}/../node_modules/electron`)
-});
+// Use electron-reload only during development (not in production)
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    require('electron-reload')(__dirname, {
+      electron: require('electron')
+    });
+  } catch (err) {
+    console.log('Electron-reload not found, skip hot reload in production.');
+  }
+}
 
 //(Already included with this code)
 const { app, BrowserWindow, ipcMain } = require('electron');
@@ -15,7 +21,7 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 500,
+    width: 550,
     height: 550,
     frame: false,
     resizable: true,
