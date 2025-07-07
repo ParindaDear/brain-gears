@@ -131,6 +131,9 @@ header h2 {
 .image.reverse:nth-child(5) { animation: imageCycle 6s infinite; animation-delay: 4s; }
 .image.reverse:nth-child(6) { animation: imageCycle 6s infinite; animation-delay: 5s; }
 
+.paused {
+  animation-play-state: paused !important;
+}
 
 #timer {
   display: inline-block;
@@ -151,8 +154,16 @@ header h2 {
   margin-bottom: 40px;
 }
 
+#pause-btn {
+  image-rendering: pixelated;
+}
+
 #pause-btn:hover {
   transform: scale(1.1);
+}
+
+#restart-btn {
+  image-rendering: pixelated;
 }
 
 #restart-btn:hover {

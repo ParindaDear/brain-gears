@@ -15,8 +15,8 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 600,
-    height: 650,
+    width: 500,
+    height: 550,
     frame: false,
     resizable: true,
     webPreferences: {
@@ -34,7 +34,7 @@ const createWindow = () => {
     mainWindow.webContents.setZoomFactor(0.85);
   });
 
-  // Listen for the 'navigate' command to switch pages (used in render.js)
+  // Listen for the 'navigate' command to switch pages (used in render.js and timer.js)
   ipcMain.on('navigate', (event, filePath) => {
     const fullPath = path.join(__dirname, filePath);
     console.log("Navigating to:", fullPath);

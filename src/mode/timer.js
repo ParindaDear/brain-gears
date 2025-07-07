@@ -44,7 +44,33 @@ window.onload = function () {
     if (pauseBtn) {
         pauseBtn.addEventListener("click", () => {
             isPaused = !isPaused;
-            //continue here
-        })
+            pauseBtn.src = isPaused ? "../../img/play.png" : "../../img/pause.png";
+
+            const animatedImages = document.querySelectorAll('.image'); // รวมทั้ง .image และ .image.reverse
+
+            animatedImages.forEach(img => {
+                if (isPaused) {
+                    img.classList.add('paused');
+                } else {
+                    img.classList.remove('paused');
+                }
+            });
+        });
     }
-}
+
+    // Restart Button
+    if (restartBtn) {
+        restartBtn.addEventListener("click",  () => {
+            isPaused = false; // ยกเลิก pause
+            pauseBtn.srcn = "../../img/restart-button.png"; // แสดงไอคอน pause
+            startTimer(originalDuration, display); //เริ่มใหม่จากต้น
+        });
+    }
+
+    // Back Button
+    if (backBtn) {
+        backBtn.addEventListener("click", () => {
+            window.electron.send('navigate', 'menu/menu.html');
+        });
+    }
+};
