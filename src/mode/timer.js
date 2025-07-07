@@ -44,7 +44,7 @@ window.onload = function () {
     if (pauseBtn) {
         pauseBtn.addEventListener("click", () => {
             isPaused = !isPaused;
-            pauseBtn.src = isPaused ? "../../img/play.png" : "../../img/pause.png";
+            pauseBtn.src = isPaused ? "../../img/continue-button.png" : "../../img/pause-button.png";
 
             const animatedImages = document.querySelectorAll('.image'); // รวมทั้ง .image และ .image.reverse
 
